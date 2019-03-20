@@ -9,7 +9,7 @@
 
 <body>  
    <header class="main-header">
-     <a class="main-logo" href="#"><img src="img/main-logo.png" width="127px" height="22px" alt="Логотип БИБОСС"></a>
+     <a class="main-logo" href="index.html"><img src="img/main-logo.png" width="127" height="22" alt="Логотип БИБОСС"></a>
    </header>
       
     <main>
@@ -33,7 +33,7 @@
           </ul>
         </section>
 
-        <section class="score-text">
+        <section class="score-text box">
           <h2>Зачем нужны <a href="#">баллы?</a></h2>
           <p>Больше баллов — выше позиция в выдаче категории</p>
         </section>
@@ -42,7 +42,7 @@
           <section>
             <h2>Правила размещения ссылки</h2>
             <ul>
-              <li>Ссылка должна быть индексируемой (без тегов «noindex» и «nofollow»)</li>
+              <li>Ссылка должна быть индексируемой (без тегов &lt;noindex&gt; и &lt;nofollow&gt;)</li>
               <li>Ссылка должна быть читаемой, не скрытой от глаз посетителя сайта</li>
               <li>Ссылка должна быть размещена на странице сайта, посвящённой франчайзингу</li>
               <li>При размещении ссылок на другие порталы о франчайзинге – баллы обнуляются</li>
@@ -60,32 +60,41 @@
         </div>
 
         <section class="form box">
-          <h2>Получить ссылку</h2>
-          <form class="partner" action="">
+          <h2>Форма запроса ссылки</h2>
+          <form method="get">
             <p>            
               <label for="partner-name">Ваше имя</label>
               <input id="partner-name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
             </p>
             <p>
               <label for="partner-phone">Номер телефона</label>
-              <input id="partner-phone" type="tel" name="name" placeholder="Для начисления баллов и связи с Вами">
+              <input id="partner-phone" type="tel" name="phone" autocomplete="off" maxlength="20" placeholder="Для начисления баллов и связи с Вами">
             </p>
             <p>
-              <label for="partner-?">Название франшизы</label>
-              <input id="partner-?" type="text" name="name" placeholder="Например, Subway">
+              <label for="partner-franchise">Название франшизы</label>
+              <input id="partner-franchise" type="text" list="franchise-list" name="franchise-name" placeholder="Например, Subway">
+              <datalist id="franchise-list">
+                <option value="Проворный ткачик"></option>
+                <option value="ПРОФИ-СПОРТ"></option>
+                <option value="Проспект"></option>
+                <option value="Просто Чудо"></option>
+                <option value="Прокат Пони+"></option>
+              </datalist>
             </p>
             <button class="button" type="submit">Получить ссылку</button>
           </form>
         </section>
 
-          <section>
-            <p>Это еще не все... Вы можете заработать дополнительные баллы, если разместите на своём сайте новость, интервью или статью БИБОСС о Вашей компании с активной ссылкой! 50 баллов за активную ссылку на новость!</p>
-          </section>
+        <section class="last-text box">
+          <p><b>Это еще не все...</b> Вы можете заработать дополнительные баллы, если разместите на своём сайте новость, интервью или статью БИБОСС о Вашей компании с активной ссылкой! 50 баллов за активную ссылку на новость!</p>
+        </section>
       </div>
     </main>
 
-    <footer>
-      <a href="#"><img src="" alt="Иконка БИБОСС"></a>
+    <footer class="main-footer">  
+      <div class="container">
+        <a class="footer-logo" href="#"><img src="img/footer-logo.png" width="22" height="22" alt="Иконка БИБОСС"></a>
+      </div>    
     </footer>
 </body>
 </html>
