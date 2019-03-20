@@ -9,7 +9,7 @@ body {
   font-weight: 400; 
   color: #000000;
 
-  background-image: url("img/pattern.jpg");
+  background-image: url("../img/pattern.jpg");
   background-position: 0 0;
   background-repeat: repeat;  
 }
@@ -42,7 +42,9 @@ img {
 
   white-space: nowrap;
 
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -70,7 +72,7 @@ img {
 
   text-align: center;
 
-  background-image: url("img/picture-top.jpg");
+  background-image: url("../img/picture-top.jpg");
   background-position: top center;
   background-size: cover;  
 }
@@ -114,7 +116,7 @@ img {
   width: 722px;
   height: 410px;
 
-  background-image: url("img/laptop.png");
+  background-image: url("../img/laptop.png");
 }
 
 .laptop-link {
@@ -165,8 +167,12 @@ img {
 }
 
 .index-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 
   margin-bottom: 30px;
   padding-top: 40px;
@@ -216,7 +222,8 @@ img {
 }
 
 .form {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   padding: 24px 135px 30px;
   background-color: #fff4b3;
@@ -233,9 +240,15 @@ img {
 }
 
 .form p { 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   margin: 0;
   margin-bottom: 15px;
@@ -247,7 +260,8 @@ img {
 }
 
 .form input {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 360px;
   padding: 10px;
 
@@ -261,7 +275,20 @@ img {
 .form input:hover,
 .form input:focus  {
   outline: 0;
-  box-shadow: 0 0 10px 0px rgb(88, 205, 244);
+  -webkit-box-shadow: 0 0 10px 0px rgb(88, 205, 244);
+          box-shadow: 0 0 10px 0px rgb(88, 205, 244);
+}
+
+.form ::-webkit-input-placeholder {
+  color: #b2b2b2;
+}
+
+.form :-ms-input-placeholder {
+  color: #b2b2b2;
+}
+
+.form ::-ms-input-placeholder {
+  color: #b2b2b2;
 }
 
 .form ::placeholder {
@@ -269,7 +296,8 @@ img {
 }
 
 .button {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: inline-block;
   width: 160px;
   margin-left: 170px;
