@@ -243,6 +243,8 @@ img {
   display: -webkit-box; 
   display: -ms-flexbox; 
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -255,6 +257,8 @@ img {
 }
 
 .form label {
+  width: 170px;
+
   font-size: 14px;
   line-height: 32px;
 }
@@ -277,6 +281,10 @@ img {
   outline: 0;
   -webkit-box-shadow: 0 0 10px 0px rgb(88, 205, 244);
           box-shadow: 0 0 10px 0px rgb(88, 205, 244);
+}
+
+.form input[type="tel"]:invalid {
+  background-color: #eef0e5;
 }
 
 .form ::-webkit-input-placeholder {
@@ -312,6 +320,21 @@ img {
   border-radius: 4px;
   opacity: 0.3;
   cursor: pointer;
+}
+
+.tel-error {
+  display: none;
+  margin-top: 5px;
+  margin-left: 172px;
+  margin-bottom: -10px;
+
+  font-size: 14px;
+  line-height: 32px;
+  color: #ff0000;
+}
+
+.js-show {
+  display: block;
 }
 
 .last-text {  

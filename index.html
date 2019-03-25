@@ -60,7 +60,7 @@
         </div>
 
         <section class="form box">
-          <h2>Форма запроса ссылки</h2>
+          <h2>Получить ссылку</h2>
           <form method="get">
             <p>            
               <label for="partner-name">Ваше имя</label>
@@ -68,7 +68,8 @@
             </p>
             <p>
               <label for="partner-phone">Номер телефона</label>
-              <input id="partner-phone" type="tel" name="phone" autocomplete="off" maxlength="20" placeholder="Для начисления баллов и связи с Вами">
+              <input id="partner-phone" type="tel" name="phone" autocomplete="off" minlength="7" maxlength="20" placeholder="Для начисления баллов и связи с Вами">
+              <span class="tel-error">Укажите правильный телефон</span>
             </p>
             <p>
               <label for="partner-franchise">Название франшизы</label>
@@ -96,5 +97,19 @@
         <a class="footer-logo" href="#"><img src="img/footer-logo.png" width="22" height="22" alt="Иконка БИБОСС"></a>
       </div>    
     </footer>
+
+    <script>
+      var form = document.querySelector(".form");
+      var inv = form.querySelector(".tel-error");
+      var phone = form.querySelector("[name=phone]");
+
+      form.addEventListener("submit", function (evt) {
+        if (!phone.value) {
+          evt.preventDefault();
+          inv.classList.add("js-show");
+          }                            
+        });
+    </script>
+
 </body>
 </html>
